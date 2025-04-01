@@ -1,2 +1,67 @@
 .task3 {
+  padding: 5%;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+  }
+
+  .form__label {
+    margin-bottom: 10px;
+  }
+
+  .form__text-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 34px;
+  }
+  
+  .form__error-message {
+    display: none;
+    color: red;
+    font-size: 12px;
+    height: 0;
+    position: relative;
+    bottom: 24px;
+    left: 0;
+  }
+
+  .form__error-message.is-error {
+    display: block;
+  }
+
+  .form__button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .form__button.is-disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .section {
+    padding: 30px 0;
+  }
+
+  .section__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
 }
