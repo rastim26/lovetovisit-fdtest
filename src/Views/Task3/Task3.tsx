@@ -8,13 +8,19 @@ const Task3 = () => {
     const [validationMessage, setValidationMessage] = React.useState('');
     const [namesList, setNamesList] = React.useState<string[]>([]);
     const [disabled, setDisabled] = React.useState(true);
+    
+    React.useEffect(() => {
+        setFirstName('');
+        setError(false);
+        setDisabled(true);
+    }, []);
 
     const validateInput = (value: string) => {
         if (value.length < 3) {
             setError(true);
             setValidationMessage('Name must be at least 3 characters long');
             setDisabled(true);
-        } else if (namesList.includes(value.toLowerCase())) {
+        } else if (namesList.some(name => name.toLowerCase() === value.toLowerCase())) {
             console.log('Name already exists');
             setError(true);
             setValidationMessage('Name already exists');
@@ -34,16 +40,14 @@ const Task3 = () => {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
+        if (!firstName || firstName.length < 3 || namesList.includes(firstName.toLowerCase())) {
+            return;
+        }
         setNamesList([firstName, ...namesList]);
         setFirstName('');
         console.log('submitted');
     }
 
-    React.useEffect(() => {
-        setFirstName('');
-        setError(false);
-        setDisabled(true);
-    }, []);
 
     return (
         <div className="task3">
