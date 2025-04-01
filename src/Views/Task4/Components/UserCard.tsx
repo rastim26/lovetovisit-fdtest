@@ -1,8 +1,18 @@
 import './user-card.css'
 
-type Props = {}
+interface UserCardPrimaryProps {
+    name?: string
+    dob?: string
+}
+interface UserCardSecondaryProps {
+    firstName?: string
+    lastName?: string
+    dateOfBirth?: string
+}
 
-const UserCard = (props: Props) => {
+type UserCardProps = UserCardPrimaryProps & UserCardSecondaryProps;
+
+const UserCard = (props: UserCardProps) => {
     const name = props.name || `${props.firstName} ${props.lastName}`
     const dob = props.dob || props.dateOfBirth
     return (
