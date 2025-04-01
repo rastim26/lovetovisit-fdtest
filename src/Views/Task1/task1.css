@@ -4,4 +4,64 @@
     footer {
         border: 1px solid #333;
     }
+
+    .header__viewport--tablet,
+    .header__viewport--sm-desktop,
+    .header__viewport--lg-desktop {
+        display: none;
+    }
+
+    .main {
+        display: grid;
+    }
+
+    @media (min-width: 768px) {
+        .header__viewport--mobile,
+        .header__viewport--sm-desktop,
+        .header__viewport--lg-desktop {
+            display: none;
+        }
+        
+        .header__viewport--tablet {
+            display: inline;
+        }
+        
+        .main {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+    }
+    @media (min-width: 1024px) {
+        .header__viewport--mobile,
+        .header__viewport--tablet,
+        .header__viewport--lg-desktop {
+            display: none;
+        }
+
+        .header__viewport--sm-desktop {
+            display: inline;
+        }
+    
+        .main {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    @media (min-width: 1280px) {
+        .header__viewport--mobile,
+        .header__viewport--tablet,
+        .header__viewport--sm-desktop {
+            display: none;
+        }
+
+        .header__viewport--lg-desktop {
+            display: inline;
+        }
+    
+        .main {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
 }
+
+

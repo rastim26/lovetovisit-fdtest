@@ -4,23 +4,23 @@ import ViewTemplate from '../../Components/ViewTemplate/ViewTemplate.tsx'
 const Task1 = () => {
     return (
         <ViewTemplate className="task1">
-            <header>
-                Header <span>Mobile</span>
-                <span>Tablet</span>
-                <span>Small Desktop</span>
-                <span>Large Desktop</span>
+            <header className='header'>
+                Header <span className='header__viewport header__viewport--mobile'>Mobile</span>
+                <span className='header__viewport header__viewport--tablet'>Tablet</span>
+                <span className='header__viewport header__viewport--sm-desktop'>Small Desktop</span>
+                <span className='header__viewport header__viewport--lg-desktop'>Large Desktop</span>
             </header>
-            <main>
-                <div>Block 1</div>
-                <div>Block 2</div>
-                <div>Block 3</div>
-                <div>Block 4</div>
-                <div>Block 5</div>
-                <div>Block 6</div>
-                <div>Block 7</div>
-                <div>Block 8</div>
+            <main className='main'>
+                <div className='block'>Block 1</div>
+                <div className='block'>Block 2</div>
+                <div className='block'>Block 3</div>
+                <div className='block'>Block 4</div>
+                <div className='block'>Block 5</div>
+                <div className='block'>Block 6</div>
+                <div className='block'>Block 7</div>
+                <div className='block'>Block 8</div>
             </main>
-            <footer>Fotter</footer>
+            <footer className='footer'>Footer</footer>
         </ViewTemplate>
     )
 }
