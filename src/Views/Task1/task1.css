@@ -1,0 +1,7 @@
+.task1 {
+    header,
+    main,
+    footer {
+        border: 1px solid #333;
+    }
+}
