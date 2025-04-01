@@ -21,3 +21,11 @@
         }
     }
 }
+
+.group-name {
+    text-transform: capitalize;
+}
+
+.member__membership {
+    text-transform: capitalize;
+}

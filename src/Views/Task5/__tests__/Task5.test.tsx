@@ -42,7 +42,7 @@ describe('Task5', () => {
             screen.getByTestId('bronze-member').querySelectorAll('.member')
         ).toHaveLength(2)
     })
-    test('non members', () => {
+    test('none members', () => {
         render(
             <MockReduxStore>
                 <Task5 />
@@ -50,7 +50,7 @@ describe('Task5', () => {
         )
 
         expect(
-            screen.getByTestId('non-member').querySelectorAll('.member')
+            screen.getByTestId('none-member').querySelectorAll('.member')
         ).toHaveLength(1)
     })
 })
